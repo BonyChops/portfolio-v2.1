@@ -1,3 +1,7 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
 body {
   margin: 0;
   font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
@@ -10,4 +14,58 @@ body {
 code {
   font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
     monospace;
+}
+
+.windows-animation-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.windows-animation-enter {
+  opacity: 0;
+  transform: scale(1.2);
+}
+
+.windows-animation-enter-active {
+  opacity: 1;
+  transition: opacity 300ms , transform 300ms;
+  transform: scale(1.0);
+}
+
+.windows-animation-exit {
+  opacity: 1;
+}
+.windows-animation-exit-active {
+  opacity: 1;
+  transform: translateY(-100%);
+  transition: transform 700ms;
+  transition-timing-function: cubic-bezier(0.000, 0.990, 0.075, 1.010);;
+}
+
+.login-animation-active {
+  opacity: 1;
+  transform: translateX(0);
+  transition: opacity 300ms, transform 300ms;
+}
+
+.login-animation-enter {
+  opacity: 0;
+  transform: scale(1.2);
+}
+
+.login-animation-enter-active {
+  opacity: 1;
+  transition: opacity 300ms , transform 300ms;
+  transform: scale(1.0);
+}
+
+.login-animation-exit {
+  opacity: 1;
+}
+.login-animation-exit-active {
+  opacity: 1;
+  transform: translateY(-100%);
+  transition: transform 700ms;
+  transition-timing-function: cubic-bezier(0.000, 0.990, 0.075, 1.010);;
 }
