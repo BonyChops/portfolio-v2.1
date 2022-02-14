@@ -9,10 +9,10 @@ const LoginAnimation = (props) => {
     useEffect(() => {
         setTimeout(() => {
             setScreenUp(true);
-        }, 500)
+        }, 500);
     }, [])
     return (
-        <div className="absolute top-0 left-0" style={{ "overflow": "hidden" }}>
+        <div className="fixed top-0 left-0 z-50" style={{ "overflow": "hidden" }}>
 
             <CSSTransition
 
@@ -29,9 +29,9 @@ const LoginAnimation = (props) => {
                             <p className="text-6xl my-14 text-gray-200">Bony_Chops</p>
                             {/* <p className="text-3xl my-8 text-gray-200">{screenUp ? null : "Welcome"}</p> */}
                             <div className="bg-white h-12 w-80 mx-auto left-0 right-0 border-2 border-gray-200 text-3xl text-left">
-                                <Typist startDelay={1300} onTypingDone={() => {setScreenUp(false); props.accessor({callReactDefault: true})}}>
+                                <Typist startDelay={1000} onTypingDone={() => {setScreenUp(false); props.accessor({callReactDefault: true})}}>
                                     <span>●●●●●●●●</span>
-                                    <Typist.Delay ms={500} />
+                                    <Typist.Delay ms={250} />
                                 </Typist>
                             </div>
                         </div>

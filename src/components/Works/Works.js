@@ -74,16 +74,17 @@ class Works extends React.Component {
 
     render() {
         return (
-            <div className="text-white bg-black pt-16 min-h-full font-bold">
-                <div className="py-16 xl:px-64 md:px-36 sm:px-16 px-4 xl:mx-36 md:mx-16">
+            <div className="text-white bg-black pt-16 min-h-screen h-full font-bold">
+                <div className="py-16 xl:px-32 sm:px-8 px-4 xl:mx-36 md:mx-16">
                     <h2 className="text-4xl text-left text-yellow-500 mb-5">Highlighted Works</h2>
 
-                    {<div className="hidden xl:block">{this.chunkArray(this.state.workBoxes, 3).map(chunk => <div className="flex mb-5">
+                    {<div className="hidden md:block">{this.chunkArray(this.state.workBoxes, 3).map(chunk => <div className="flex mb-5">
                         {chunk}
                     </div>)}</div>}
-                    <div className="block xl:hidden">{this.chunkArray(this.state.workBoxes, 1).map(chunk => <div className="flex mb-5">
+                    <div className="block md:hidden">{this.chunkArray(this.state.workBoxes, 1).map(chunk => <div className="flex mb-5">
                         {chunk}
                     </div>)}</div>
+                    {this.state.workBoxes.length <= 0 && <p className="text-left">Loading...</p>}
 
 
                     <h2 className="text-4xl text-left mb-5 text-green-400 font-bold mt-6">Other Works</h2>

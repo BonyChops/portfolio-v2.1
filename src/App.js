@@ -1,4 +1,5 @@
 import { BrowserRouter as Router, Route } from "react-router-dom";
+import { withRouter } from "react-router";
 import Header from './components/Header/Header';
 import ReactDefaultPage from './components/ReactDefaultPage/ReactDefaultPage';
 import './App.css';
@@ -9,13 +10,19 @@ import Socials from "./components/Socials/Socials";
 import Works from "./components/Works/Works";
 import RedirectToV1 from "./components/RedirectToV1/RedirectToV1";
 import WIP from "./components/WIP/WIP";
+import Cookies from "js-cookie";
 
 class App extends React.Component {
   constructor(props) {
     super(props);
     this.state = {
-      callReactDefault: false
+      callReactDefault: false,
+      defaultAnimateFinished: false
     }
+  }
+
+  componentDidMount() {
+
   }
 
   accessor = (state) => {
@@ -23,11 +30,13 @@ class App extends React.Component {
   }
 
   render = () => {
+    const isTop = (window.location.pathname === "/");
     return (
       <div className="App">
         {/* <ReactDefaultPage /> */}
-        {/* <LoginAnimation accessor={this.accessor} /> */}
-        {/* {(this.state.callReactDefault) ? <ReactDefaultPage /> : null} */}
+        {isTop && Cookies.get("loginAnimatePlayed") !== 'true' && <LoginAnimation accessor={this.accessor} />}
+        {isTop && (this.state.callReactDefault) && Cookies.get("loginAnimatePlayed") !== 'true' ? <ReactDefaultPage accessor={this.accessor} /> : null}
+        {isTop && !this.state.defaultAnimateFinished && Cookies.get("loginAnimatePlayed") !== 'true' && <div className="bg-white z-30 w-screen h-screen fixed top-0 left-0"></div>}
         <div className="">
           <Router>
             <Header />
@@ -44,4 +53,4 @@ class App extends React.Component {
 
 }
 
-export default App;
+export default (App);

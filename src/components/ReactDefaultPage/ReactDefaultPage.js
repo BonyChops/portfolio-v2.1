@@ -2,17 +2,25 @@ import { useEffect, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import logo from './logo.svg';
 import Typist from 'react-typist';
-
+import Cookies from "js-cookie";
 const ReactDefaultPage = (props) => {
     const [screenUp, setScreenUp] = useState(false);
     useEffect(() => {
         setTimeout(() => {
             setScreenUp(true);
-        }, 1000)
+        }, 0);
+        setTimeout(() => {
+            setScreenUp(false);
+            props.accessor({
+                defaultAnimateFinished: true
+            });
+            Cookies.set('loginAnimatePlayed', true);
+        }, 2800);
+
     }, [])
     console.log(screenUp)
     return (
-        <div className="header absolute top-0 left-0 w-screen" style={{ "overflow": "hidden" }}>
+        <div className="header fixed top-0 left-0 w-screen z-40" style={{ "overflow": "hidden" }}>
 
             <CSSTransition
 
@@ -34,7 +42,7 @@ const ReactDefaultPage = (props) => {
                             }
                         }}>
                             <span> Edit <code>src/App.js</code> and save to reload. </span>
-                            <Typist.Backspace count={36} delay={2000} />
+                            <Typist.Backspace count={36} delay={500} />
                             <span> Developed! </span>
                         </Typist>
                     </p>
@@ -46,7 +54,7 @@ const ReactDefaultPage = (props) => {
                     >
                         Learn React
                     </a>
-                    <button onClick={() => setScreenUp(false)}>delete</button>
+                   {/*  <button onClick={() => setScreenUp(false)}>delete</button> */}
                 </header>
             </CSSTransition>
         </div>
