@@ -12,7 +12,7 @@ const ReactDefaultPage = (props) => {
     }, [])
     console.log(screenUp)
     return (
-        <div class="header absolute top-0 left-0 w-screen" style={{ "overflow": "hidden" }}>
+        <div className="header absolute top-0 left-0 w-screen" style={{ "overflow": "hidden" }}>
 
             <CSSTransition
 
