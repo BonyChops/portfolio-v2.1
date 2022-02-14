@@ -143,7 +143,7 @@ const Top = (props) => {
 
     return (
         <div className="text-white font-thin bg-gray-700">
-            <div className="bg-gray-800 md:flex sm:block block pt-28 md:pb-16 xl:px-48 md:px-16 px-16 rounded-3xl shadow-2xl border-b-2 border-gray-900">
+            <div className="bg-gray-800 md:flex sm:block block pt-28 md:pb-16 xl:px-48 md:px-16 px-4 rounded-3xl shadow-2xl border-b-2 border-gray-900">
                 <div className="md:w-1/2 w-full h-24 overflow-hidden">
                     <div className="my-auto flex ml-auto right-0">
                         <img className="rounded-full xl:w-24 xl:h-24 md:w-24 w-12 md:h-24 h-12" src={writeIcon} />
