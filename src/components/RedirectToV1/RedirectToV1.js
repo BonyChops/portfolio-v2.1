@@ -3,8 +3,16 @@ import v1icon from "../../resources/youtube_icon.jpg"
 import RightArrow from "../../resources/right";
 import Warn from "../../resources/warn";
 import { useLocation } from "react-router";
+import ReactGA from "react-ga4";
+import { useEffect } from "react";
 
 const RedirectToV1 = (props) => {
+    useEffect(() => {
+        ReactGA.send("pageview");
+
+        return () => { }
+    }, []);
+
     const search = useLocation().search;
 
     const query2 = new URLSearchParams(search);

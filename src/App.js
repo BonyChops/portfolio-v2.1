@@ -11,6 +11,7 @@ import Works from "./components/Works/Works";
 import RedirectToV1 from "./components/RedirectToV1/RedirectToV1";
 import WIP from "./components/WIP/WIP";
 import Cookies from "js-cookie";
+import ReactGA from "react-ga4";
 
 class App extends React.Component {
   constructor(props) {
@@ -22,8 +23,11 @@ class App extends React.Component {
   }
 
   componentDidMount() {
-
+    console.log(process.env.REACT_APP_GTAG)
+    ReactGA.initialize(process.env.REACT_APP_GTAG);
   }
+
+
 
   accessor = (state) => {
     this.setState(state);

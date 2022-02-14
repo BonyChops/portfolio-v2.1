@@ -11,6 +11,8 @@ import gmail from "../../resources/socials/gmail.svg";
 import Key from "../../resources/key.svg";
 import amazon from "../../resources/socials/amazon.svg"
 import atcoder from "../../resources/notfree/socials/atcoder.png"
+import { useEffect } from "react";
+import ReactGA from "react-ga4";
 
 const socialLinks = [
     {
@@ -136,6 +138,11 @@ const socialLinks = [
 ]
 
 const Socials = (props) => {
+    useEffect(() => {
+        ReactGA.send({ hitType: "pageview", page: "/socials" });
+
+        return () => { }
+    }, []);
     return (
         <div className="text-white bg-black pt-16 min-h-full font-bold">
             <div className="py-16 xl:px-72 md:px-36 sm:px-16 px-4 xl:mx-36 md:mx-16">

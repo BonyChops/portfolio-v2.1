@@ -8,6 +8,7 @@ import RightArrow from "../../resources/right";
 import MenuClosed from "../../resources/menuClosed";
 import MenuOpened from "../../resources/menuOpened";
 import Checked from "../../resources/checked";
+import ReactGA from "react-ga4";
 
 const WIP = () => {
     const [wipData, setWipData] = useState(Array.from({ length: 3 }).map((v) => ({ loading: true })));
@@ -50,6 +51,7 @@ const WIP = () => {
         (async () => {
             fetchWipData();
         })();
+        ReactGA.send({ hitType: "pageview", page: "/wip" });
         return () => { };
     }, []);
     wipData.sort((a, b) => moment(a.due) - moment(b.due));

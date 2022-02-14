@@ -6,6 +6,7 @@ import Fork from "../../resources/fork";
 import { Link } from "react-router-dom";
 import { withRouter } from "react-router";
 import ExLink from "../../resources/ex-link";
+import ReactGA from "react-ga4";
 
 const worksInfoURI = 'https://gist.githubusercontent.com/BonyChops/c54f243d81666a38187df774a1a71f88/raw/works.json';
 
@@ -24,6 +25,7 @@ class Works extends React.Component {
             worksInfo
         });
         this.updateWorkBoxes();
+        ReactGA.send({ hitType: "pageview", page: "/works" });
     }
 
     updateWorkBoxes = () => {
