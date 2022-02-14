@@ -86,7 +86,8 @@ const socialLinks = [
         inverseColor: true,
         bigIcon: true,
         icon: atcoder,
-        color: "white"
+        color: "white",
+        link: "https://atcoder.jp/users/bony_chops"
     },
     {
         title: "Zenn",
@@ -128,7 +129,9 @@ const socialLinks = [
         name: "欲しい物リスト",
         color: "#FF9900",
         icon: amazon,
-        link: "https://www.amazon.jp/hz/wishlist/ls/8FLZNBFCT3ZK?ref_=wl_share"
+        link: "https://www.amazon.jp/hz/wishlist/ls/8FLZNBFCT3ZK?ref_=wl_share",
+        inverseColor: true
+
     }
 ]
 

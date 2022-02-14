@@ -37,7 +37,7 @@ const skills = {
 const history = [
     {
         "title": "爆誕",
-        "date": "30 July 2002",
+        "date": "July 30, 2002",
         "color": "yellow-600"
     },
     {
@@ -58,7 +58,7 @@ const history = [
     },
     {
         title: "長野高専 入学",
-        date: "01 April 2018",
+        date: "April 01, 2018",
         color: "yellow-600"
     },
     /*{
@@ -83,7 +83,7 @@ const history = [
     {
         title: "Web×IoT メイカーズチャレンジ 2020-21 in 信州: Team Jambiで特別賞受賞",
         color: "yellow-600",
-        date: "7 Oct to 28 Oct, 2020",
+        date: "Oct 7 - Oct 28, 2020",
     },
     /*{
         title: "インターン: エプソンアヴァシス上田事業所",

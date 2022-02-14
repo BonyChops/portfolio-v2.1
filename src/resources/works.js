@@ -33,6 +33,21 @@ const workInfo = [
         title: "sheet-to-latex-table",
         description: "ExcelやLibre OfficeなどからLaTeXの表を作成",
         repoApi: "https://api.github.com/repos/BonyChops/sheet-to-latex-table"
+    },
+    {
+        title: "mc-farming-bot",
+        description: "マインクラフト向け自動で農業するbot",
+        repoApi: "https://api.github.com/repos/BonyChops/mc-farming-bot"
+    },
+    {
+        title: "matashitemo",
+        description: "またしても何も知らなそうなジェネレータ",
+        repoApi: "https://api.github.com/repos/BonyChops/matashitemo"
+    },
+    {
+        title: "grass-notify",
+        description: "今日GitHubにて草を生やしたかどうかをDiscordに通知する",
+        repoApi: "https://api.github.com/repos/BonyChops/grass-notify"
     }
 ];
 
