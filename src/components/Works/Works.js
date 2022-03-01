@@ -19,7 +19,7 @@ class Works extends React.Component {
         };
     }
 
-    componentDidMount = async() => {
+    componentDidMount = async () => {
         const worksInfo = (await axios.get(worksInfoURI)).data;
         this.setState({
             worksInfo
@@ -58,8 +58,8 @@ class Works extends React.Component {
         return tempArray;
     }
 
-    getWorkBoxes = () => this.state.worksInfo.map(item => <div className="xl:w-1/3 w-full  mx-2 h-56 bg-gray-800 rounded-xl shadow-xl text-left py-4 px-2 relative">
-        <h3 className="text-2xl mb-5 h-14">{item.title}</h3>
+    getWorkBoxes = () => this.state.worksInfo.map(item => <div className={`xl:w-1/3 w-full  mx-2 h-56 ${item.img !== undefined ? "" : "bg-gray-800"} rounded-xl shadow-xl text-left py-4 px-2 relative`} style={item.img !== undefined ? { backgroundImage: `linear-gradient( rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5) ), url(${item.img})`, backgroundSize: "cover" } : {}}>
+        <h3 className="text-2xl mb-5 h-14 drop-shadow-lg">{item.title}</h3>
         <p className="text-base mb-5 h-18 font-medium">{item.description}</p>
         {item.repoApi !== undefined ? this.getApi(item.repoApi) : null}
         <div className="flex bottom-4 absolute">
@@ -71,6 +71,10 @@ class Works extends React.Component {
                 ? <a className="flex mr-2 text-blue-400" href={this.state[item.repoApi]?.html_url} target="_blank" rel="noreferrer">{ExLink}<span className="ml-2">GitHub</span></a> : null}
             {![undefined, null, ""].some(c => c === this.state[item.repoApi]?.homepage)
                 ? <a className="flex mr-2 text-blue-400" href={this.state[item.repoApi]?.homepage} target="_blank" rel="noreferrer">{ExLink}<span className="ml-2">ページ</span></a> : null}
+
+            {/* {item.links !== undefined && item.links.map(v => (
+                <a className="flex mr-2 text-blue-400" href={v.link} target="_blank" rel="noreferrer">{ExLink}<span className="ml-2">{v.title}</span></a>
+            ))} */}
         </div>
     </div>)
 
@@ -93,7 +97,7 @@ class Works extends React.Component {
                     <p className="text-left">See <a href={"https://github.com/BonyChops?tab=repositories&q=&type=&language=&sort=stargazers"} target="_blank" rel="noreferrer" className="text-blue-400">GitHub</a>.</p>
 
                     <h2 className="text-4xl text-left mb-5 text-gray-300 font-bold mt-6">Old Works</h2>
-                    <p className="text-left">AviUtl Project Transferなどの過去作品は<Link to={`/v1?redirect=${encodeURIComponent("/downloads/")}`}className="text-blue-400">Bony_Chops v1サイト</Link>へ.</p>
+                    <p className="text-left">AviUtl Project Transferなどの過去作品は<Link to={`/v1?redirect=${encodeURIComponent("/downloads/")}`} className="text-blue-400">Bony_Chops v1サイト</Link>へ.</p>
 
 
                 </div>
