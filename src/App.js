@@ -1,4 +1,4 @@
-import { BrowserRouter as Router, Route } from "react-router-dom";
+import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
 import { withRouter } from "react-router";
 import Header from './components/Header/Header';
 import ReactDefaultPage from './components/ReactDefaultPage/ReactDefaultPage';
@@ -12,6 +12,7 @@ import RedirectToV1 from "./components/RedirectToV1/RedirectToV1";
 import WIP from "./components/WIP/WIP";
 import Cookies from "js-cookie";
 import ReactGA from "react-ga4";
+import NotFound from "./components/NotFound/NotFound";
 
 class App extends React.Component {
   constructor(props) {
@@ -44,11 +45,14 @@ class App extends React.Component {
         <div className="">
           <Router>
             <Header />
-            <Route exact path="/" component={Top} />
-            <Route path="/socials" component={Socials} />
-            <Route path="/works" component={Works} />
-            <Route path="/v1" component={RedirectToV1} />
-            <Route path="/wip" component={WIP} />
+            <Switch>
+              <Route exact path="/" component={Top} />
+              <Route path="/socials" component={Socials} />
+              <Route path="/works" component={Works} />
+              <Route path="/v1" component={RedirectToV1} />
+              <Route path="/wip" component={WIP} />
+              <Route component={NotFound} />
+            </Switch>
           </Router>
         </div>
       </div>
