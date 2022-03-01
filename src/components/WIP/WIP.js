@@ -82,8 +82,8 @@ const WIP = () => {
                             </div> :
                             <div className={`relative w-full text-left `}>
                                 <p className={`text-xl ${v.private ? "text-gray-400" : ""}`}>{v.title} <span className="text-gray-400">#{v.id}</span></p>
-                                {v.completedDate && <p className="text-xl font-normal">Done on {moment(v.completedDate).locale("ja").format("MMM DD, YYYY \\a\\t hh:mm A")}</p>}
-                                {v.due && <p className="text-xl font-normal">{(v.description !== undefined && v.description !== "" && !v.private) && `${v.description}・`}Due {moment(v.due).locale("ja").format("MMM DD, YYYY hh:mm A")}</p>}
+                                {v.completedDate && <p className="text-xl font-normal">Done on {moment(v.completedDate).locale("ja").format("MMM DD(ddd), YYYY \\a\\t hh:mm A")}</p>}
+                                {v.due && <p className="text-xl font-normal">{(v.description !== undefined && v.description !== "" && !v.private) && `${v.description}・`}Due {moment(v.due).locale("ja").format("MMM DD(ddd), \\a\\t YYYY hh:mm A")}</p>}
                                 {v.due !== undefined && <p className={`relative md:absolute md:right-0 md:bottom-0 w-auto ml-auto md:mr-0 ${moment(v.due) < moment() ? "text-red-600" : "text-purple-400"}`}>{moment(v.due) < moment() && "Past due"}{moment(v.due).format("YYYYMMDD") === moment().format("YYYYMMDD") && "Due today"}{moment(v.due).format("YYYYMMDD") === moment().add(1, "days").format("YYYYMMDD") && "Due tomorrow"}</p>}
                                 {v.subtasks !== undefined && v.subtasks?.length > 0 && (<div className="flex">
                                     <div className="w-1/12 mr-4">{Math.round((v.subtasks.filter(v => v.completed).length * 100 / v.subtasks.length))}%</div>
