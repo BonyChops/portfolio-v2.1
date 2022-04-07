@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import writeIcon from "../../resources/icon_new2_white.png"
 import ReactGA from "react-ga4";
+import ExLink from "../../resources/ex-link";
 const lang = "ja"
 const profile = {
     Name: "Sota Suzuki",
@@ -11,8 +12,8 @@ const profile = {
 }
 
 const profileDetails = {
-    /*"Favorite Artists": ["HIKAKIN", "Omega Sisters", "Avicii", "TheFatRat", "Galantis"].join(", "),
-    Licence: ["Driver's licence", "英検 2級", "TOEIC 685 (IP 715)"].join(", "),*/
+    /*"Favorite Artists": ["HIKAKIN", "Omega Sisters", "Avicii", "TheFatRat", "Galantis"].join(", "), */
+    License: <span class="">{["Driver's license", "英検 2級", <a className="flex text-blue-400" href="https://twitter.com/BonyChops/status/1503567078699462659?s=20&t=tPdrA4blpItQQJG4FeiTAw" target="_blank" rel="noopener">{ExLink} {"TOEIC L&R 860"}</a>].map(v => <p className="mr-2">{v}</p>)}</span>,
     Supporting: <a className="text-blue-400" href="https://beditor.net/">Beditor</a>,
     "Dog or Cat": "Cat"
 }
