@@ -179,7 +179,7 @@ const Top = (props) => {
                         </tr>
                     }) : null}
                 </table>
-                <span onClick={toggleShowMore} className="text-blue-400 text-left left-0 mr-auto text-xl">{showMoreProfile ? "Show less" : "Show more"}</span>
+                <span onClick={toggleShowMore} className="text-blue-400 text-left left-0 mr-auto text-xl cursor-pointer">{showMoreProfile ? "Show less" : "Show more"}</span>
             </div>
             <div className="py-16 xl:px-72 md:px-36 sm:px-16 px-4 md:flex">
                 <div className="md:w-1/2 w-full mb-12">
