@@ -174,7 +174,7 @@ const Top = (props) => {
                     {showMoreProfile ? Object.keys(profileDetails).map(key => {
                         const value = profileDetails[key];
                         return <tr className="text-2xl">
-                            <td className="text-right">{key}</td>
+                            <td className="text-right align-top">{key}</td>
                             <td className="text-left pl-5">{value}</td>
                         </tr>
                     }) : null}
