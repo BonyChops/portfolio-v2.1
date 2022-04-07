@@ -1,6 +1,7 @@
 import { useEffect, useState } from "react"
 import writeIcon from "../../resources/icon_new2_white.png"
 import ReactGA from "react-ga4";
+import ExLink from "../../resources/ex-link";
 const lang = "ja"
 const profile = {
     Name: "Sota Suzuki",
@@ -11,8 +12,8 @@ const profile = {
 }
 
 const profileDetails = {
-    /*"Favorite Artists": ["HIKAKIN", "Omega Sisters", "Avicii", "TheFatRat", "Galantis"].join(", "),
-    Licence: ["Driver's licence", "英検 2級", "TOEIC 685 (IP 715)"].join(", "),*/
+    /*"Favorite Artists": ["HIKAKIN", "Omega Sisters", "Avicii", "TheFatRat", "Galantis"].join(", "), */
+    License: <span class="">{["Driver's license", "英検 2級", <a className="flex text-blue-400" href="https://twitter.com/BonyChops/status/1503567078699462659?s=20&t=tPdrA4blpItQQJG4FeiTAw" target="_blank" rel="noopener">{ExLink} {"TOEIC L&R 860"}</a>].map(v => <p className="mr-2">{v}</p>)}</span>,
     Supporting: <a className="text-blue-400" href="https://beditor.net/">Beditor</a>,
     "Dog or Cat": "Cat"
 }
@@ -173,12 +174,12 @@ const Top = (props) => {
                     {showMoreProfile ? Object.keys(profileDetails).map(key => {
                         const value = profileDetails[key];
                         return <tr className="text-2xl">
-                            <td className="text-right">{key}</td>
+                            <td className="text-right align-top">{key}</td>
                             <td className="text-left pl-5">{value}</td>
                         </tr>
                     }) : null}
                 </table>
-                <span onClick={toggleShowMore} className="text-blue-400 text-left left-0 mr-auto text-xl">{showMoreProfile ? "Show less" : "Show more"}</span>
+                <span onClick={toggleShowMore} className="text-blue-400 text-left left-0 mr-auto text-xl cursor-pointer">{showMoreProfile ? "Show less" : "Show more"}</span>
             </div>
             <div className="py-16 xl:px-72 md:px-36 sm:px-16 px-4 md:flex">
                 <div className="md:w-1/2 w-full mb-12">
