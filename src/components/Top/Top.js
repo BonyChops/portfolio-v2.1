@@ -14,7 +14,7 @@ const profile = {
 const profileDetails = {
     /*"Favorite Artists": ["HIKAKIN", "Omega Sisters", "Avicii", "TheFatRat", "Galantis"].join(", "), */
     License: <span class="">{["Driver's license", "英検 2級", <a className="flex text-blue-400" href="https://twitter.com/BonyChops/status/1503567078699462659?s=20&t=tPdrA4blpItQQJG4FeiTAw" target="_blank" rel="noopener">{ExLink} {"TOEIC L&R 860"}</a>].map(v => <p className="mr-2">{v}</p>)}</span>,
-    Supporting: <a className="text-blue-400" href="https://beditor.net/">Beditor</a>,
+    Supporting: <a className="text-blue-400 flex" href="https://github.com/b-editor/BeUtl" target="_blank" rel="noopener">{ExLink}BeUtl</a>,
     "Dog or Cat": "Cat"
 }
 
