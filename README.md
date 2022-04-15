@@ -3,6 +3,7 @@ Start developing
 - Linux
     ```sh
     npm i
+    cp /path/to/resources/notfree # Required for non-free resources
     REACT_APP_GTAG=G-*** npm start
     ```
 - Windows
