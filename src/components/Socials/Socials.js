@@ -13,6 +13,7 @@ import amazon from "../../resources/socials/amazon.svg"
 import atcoder from "../../resources/notfree/socials/atcoder.png"
 import { useEffect } from "react";
 import ReactGA from "react-ga4";
+import ExLink from "../../resources/ex-link";
 
 const socialLinks = [
     {
@@ -140,13 +141,14 @@ const socialLinks = [
 const Socials = (props) => {
     useEffect(() => {
         ReactGA.send({ hitType: "pageview", page: "/socials" });
-
+        console.log("These are social accounts owned by me, Bony_Chops.\n\n" + socialLinks.map(v => `# ${v.title}\n  - ${v.name}\n  - ${v.link}`).join("\n\n"))
         return () => { }
     }, []);
     return (
         <div className="text-white bg-black pt-16 min-h-full font-bold">
             <div className="py-16 xl:px-72 md:px-36 sm:px-16 px-4 xl:mx-36 md:mx-16">
                 <h2 className="text-4xl text-left text-green-400 mb-5 text-green-400font-bold">Socials</h2>
+                <h3 className="flex"><a className="flex text-blue-400" href={`${process.env.PUBLIC_URL}/socials_signed_message.txt`}>{ExLink} Proof</a></h3>
                 {socialLinks.map(item => <a href={item.link} target="_blank" rel="noopener noreferrer" className={`mx-auto sm:w-96 flex ${item.notAvailable ? "bg-gray-700" : " hover:opacity-30 "} rounded-xl shadow-sm py-5 text-left px-2 my-5 ${item.inverseColor ? "text-black" : ""}`} style={item.color !== undefined ? { backgroundColor: item.color } : {}}>
                     <div className="w-1/6 h-full my-auto">
                         {item.icon !== undefined ? <img src={item.icon} width={item.bigIcon ? "48px" : "32px"} class="mx-auto my-auto" /> : null}

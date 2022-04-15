@@ -1,0 +1,80 @@
+-----BEGIN PGP SIGNED MESSAGE-----
+Hash: SHA256
+
+These are social accounts owned by me, Bony_Chops.
+
+# Mail
+  - contact@bonychops.com
+  - mailto:contact@bonychops.com
+
+# YouTube
+  - Bony_Chops - Archived
+  - https://youtube.com/Bony_Chops
+
+# YouTube
+  - Bony_Chops v2
+  - https://www.youtube.com/channel/UCVtSxqezSf8yJb0LGFplpIw
+
+# Twitter
+  - @BonyChops
+  - https://twitter.com/BonyChops
+
+# GitHub
+  - BonyChops
+  - https://github.com/BonyChops
+
+# Keybase
+  - bonychops
+  - https://keybase.io/bonychops/sigs/U3wlm9JB0oB4TLeRiU5SWp0YBqhM8fg6hGuLVu5rpJM
+
+# PGP Key
+  - 2763 98BC 7EFF 6D86
+  - https://keybase.io/bonychops/pgp_keys.asc
+
+# Qiita
+  - BonyChops
+  - https://qiita.com/BonyChops
+
+# LAPRAS
+  - BonyChops
+  - https://lapras.com/public/FWS9AJP
+
+# AtCoder
+  - Bony_Chops
+  - https://atcoder.jp/users/bony_chops
+
+# Zenn
+  - bony_chops
+  - https://zenn.dev/bony_chops
+
+# Spotify
+  - bony_chops
+  - https://open.spotify.com/user/bony_chops?si=b5de1e352fad4eba
+
+# Nicha
+  - Developing...
+  - undefined
+
+# Kicha
+  - Archived Project
+  - https://github.com/BonyChops/simple-bbs
+
+# Amazon
+  - 欲しい物リスト
+  - https://www.amazon.jp/hz/wishlist/ls/8FLZNBFCT3ZK?ref_=wl_share
+-----BEGIN PGP SIGNATURE-----
+
+iQIzBAEBCAAdFiEEewPYodaz16USn7NsRXv11p7OCIMFAmJZGWQACgkQRXv11p7O
+CIOzwRAAglFABB4h5p/cDK+I0CbbzjfX7Aqczk6kg1xjxeLPZZhKhbqDMpeb+kAN
+76WmmvmYRrk74Pqo+xhJvPJCB4sMNt/3WoXvRqPcN8o5oHfwsDm2s5nRaWD0isvw
+8346zczm5u60HjaD+Egx05a8C6T7GcKOkr1TnbrrTEdNuME8qK/xARbnY18ggIAO
+FWUBjvB6WsNjUWTFGXZ6K9fT2G2XWsrZitM/uSYBqxBPqhViSZpPuODps3G6/tFX
+LVFvWltV7t+oO/VFHD7qtgVmCe6QzlV2ar1M8GJRUcVVyjJfTJMGVfhmsj4YTsEm
+ZxUANlxIYGHDNVFa3XYNRHg+C7WkPjFDolkWBp2Ygc+bXmzy6JvQ2tJ41620/A2k
+lcZ+KLHeIXaUmc+NNof/dj97vn3fHn6al7h86dmnVePzuXVtDRZqquASBSdMqraq
+HFp2Ix40TPlOFyWW5kheN+2ER4til0GnESI+ci9l14ocGUCAMmUhK6oiNCde9c2J
+h/Ef+C5cx8Xwmby7rtCFTQfxYT9pjiJ4kYvGVr3iqOSt37h4ll5P1KeTQwnKLlya
+2tDpLGuUGcF/i0FEkSrZiPLOw6W/DGcPXjLaAXgZ5Jhn9gCDpwS1c8Tm55nw/99C
+HiHv/yopnynffyiNTl9fw7GrB/uqKVPl2UTAobgxFVebjc2vvXg=
+=9RfR
+-----END PGP SIGNATURE-----
