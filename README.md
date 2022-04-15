@@ -2,10 +2,12 @@
 Start developing
 - Linux
     ```sh
+    npm i
     REACT_APP_GTAG=G-*** npm start
     ```
 - Windows
     ```
+    npm i
     $env:REACT_APP_GTAG=G-***
     npm start
     ```
