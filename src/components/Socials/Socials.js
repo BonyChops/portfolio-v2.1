@@ -148,7 +148,7 @@ const Socials = (props) => {
         <div className="text-white bg-black pt-16 min-h-full font-bold">
             <div className="py-16 xl:px-72 md:px-36 sm:px-16 px-4 xl:mx-36 md:mx-16">
                 <h2 className="text-4xl text-left text-green-400 mb-5 text-green-400font-bold">Socials</h2>
-                <h3 className="flex"><a className="flex text-blue-400" href={`${process.env.PUBLIC_URL}/socials_signed_message.txt`}>{ExLink} Proof</a></h3>
+                <h3 className="flex"><a className="flex text-blue-400 mr-2" target="_blank" rel="noopener noreferrer" href={`${process.env.PUBLIC_URL}/socials_signed_message.txt`}>{ExLink} Proof</a>(Signed with pgp key<a href={socialLinks.find(v => v.title === "PGP Key").link} className="text-blue-400 ml-1" target="_blank" rel="noopener noreferrer">{socialLinks.find(v => v.title === "PGP Key").name}</a>)</h3>
                 {socialLinks.map(item => <a href={item.link} target="_blank" rel="noopener noreferrer" className={`mx-auto sm:w-96 flex ${item.notAvailable ? "bg-gray-700" : " hover:opacity-30 "} rounded-xl shadow-sm py-5 text-left px-2 my-5 ${item.inverseColor ? "text-black" : ""}`} style={item.color !== undefined ? { backgroundColor: item.color } : {}}>
                     <div className="w-1/6 h-full my-auto">
                         {item.icon !== undefined ? <img src={item.icon} width={item.bigIcon ? "48px" : "32px"} class="mx-auto my-auto" /> : null}
