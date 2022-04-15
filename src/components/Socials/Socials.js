@@ -11,6 +11,7 @@ import gmail from "../../resources/socials/gmail.svg";
 import Key from "../../resources/key.svg";
 import amazon from "../../resources/socials/amazon.svg"
 import atcoder from "../../resources/notfree/socials/atcoder.png"
+import patreon from "../../resources/socials/patreon.svg";
 import { useEffect } from "react";
 import ReactGA from "react-ga4";
 import ExLink from "../../resources/ex-link";
@@ -113,6 +114,13 @@ const socialLinks = [
         color: "#1DB954",
         icon: spotify,
         link: "https://open.spotify.com/user/bony_chops?si=b5de1e352fad4eba"
+    },
+    {
+        title: "Patreon",
+        name: "Bony_Chops",
+        color: "#FF424D",
+        icon: patreon,
+        link: "https://www.patreon.com/user/creators?u=52944861"
     },
     {
         title: "Nicha",
