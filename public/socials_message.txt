@@ -25,7 +25,7 @@ These are social accounts owned by me, Bony_Chops.
   - https://keybase.io/bonychops/sigs/U3wlm9JB0oB4TLeRiU5SWp0YBqhM8fg6hGuLVu5rpJM
 
 # PGP Key
-  - 2763 98BC 7EFF 6D86
+  - 457B F5D6 9ECE 0883
   - https://keybase.io/bonychops/pgp_keys.asc
 
 # Qiita

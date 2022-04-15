@@ -61,7 +61,7 @@ const socialLinks = [
     },
     {
         title: "PGP Key",
-        name: "2763 98BC 7EFF 6D86",
+        name: "457B F5D6 9ECE 0883",
         color: "white",
         inverseColor: true,
         icon: Key,
