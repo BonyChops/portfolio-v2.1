@@ -1,7 +1,7 @@
 import { useEffect, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import logo from './logo.svg';
-import Typist from 'react-typist';
+import { TypeAnimation } from 'react-type-animation';
 import Cookies from "js-cookie";
 const ReactDefaultPage = (props) => {
     const [screenUp, setScreenUp] = useState(false);
@@ -9,13 +9,13 @@ const ReactDefaultPage = (props) => {
         setTimeout(() => {
             setScreenUp(true);
         }, 0);
-        setTimeout(() => {
+        /* setTimeout(() => {
             setScreenUp(false);
             props.accessor({
                 defaultAnimateFinished: true
             });
             Cookies.set('loginAnimatePlayed', true);
-        }, 2800);
+        }, 2800); */
 
     }, [])
     console.log(screenUp)
@@ -33,18 +33,24 @@ const ReactDefaultPage = (props) => {
                 <header className="App-header">
                     <img src={logo} className="App-logo" alt="logo" />
                     <p>
-
-                        <Typist delayGenerator={(mean, std, current) => {
-                            if (current.lineIdx <= 2) {
-                                return 10;
-                            } else {
-                                return 20;
-                            }
-                        }}>
-                            <span> Edit <code>src/App.js</code> and save to reload. </span>
-                            <Typist.Backspace count={36} delay={500} />
-                            <span> Developed! </span>
-                        </Typist>
+                        <TypeAnimation
+                            sequence={[
+                                'Edit src/App.js and save to reload.',
+                                1000,
+                                'Developed!',
+                                500,
+                                () => {
+                                    setScreenUp(false);
+                                    props.accessor({
+                                        defaultAnimateFinished: true
+                                    });
+                                    Cookies.set('loginAnimatePlayed', true);
+                                }
+                            ]}
+                            speed={75}
+                            wrapper="span"
+                            cursor={true}
+                        />
                     </p>
                     <a
                         className="App-link"
@@ -54,7 +60,7 @@ const ReactDefaultPage = (props) => {
                     >
                         Learn React
                     </a>
-                   {/*  <button onClick={() => setScreenUp(false)}>delete</button> */}
+                    {/*  <button onClick={() => setScreenUp(false)}>delete</button> */}
                 </header>
             </CSSTransition>
         </div>

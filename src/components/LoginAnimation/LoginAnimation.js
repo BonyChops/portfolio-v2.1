@@ -2,7 +2,7 @@ import { useEffect, useState } from "react";
 import { CSSTransition } from "react-transition-group";
 import mountainImage from "../../resources/notfree/mountains-1412683_1280.png"
 import Icon from "../../resources/icon_new2_white.png"
-import Typist from "react-typist";
+import { TypeAnimation } from 'react-type-animation';
 
 const LoginAnimation = (props) => {
     const [screenUp, setScreenUp] = useState(false);
@@ -29,10 +29,19 @@ const LoginAnimation = (props) => {
                             <p className="text-6xl my-14 text-gray-200">Bony_Chops</p>
                             {/* <p className="text-3xl my-8 text-gray-200">{screenUp ? null : "Welcome"}</p> */}
                             <div className="bg-white h-12 w-80 mx-auto left-0 right-0 border-2 border-gray-200 text-3xl text-left">
-                                <Typist startDelay={1000} onTypingDone={() => {setScreenUp(false); props.accessor({callReactDefault: true})}}>
-                                    <span>●●●●●●●●</span>
-                                    <Typist.Delay ms={250} />
-                                </Typist>
+                                <TypeAnimation
+                                    sequence={[
+                                        500,
+                                        '●●●●●●●●',
+                                        500,
+                                        () => {
+                                            setScreenUp(false);
+                                            props.accessor({ callReactDefault: true })
+                                        }
+                                    ]}
+                                    wrapper="span"
+                                    cursor={true}
+                                />
                             </div>
                         </div>
                     </div>
