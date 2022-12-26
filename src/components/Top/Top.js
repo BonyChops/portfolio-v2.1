@@ -2,13 +2,16 @@ import { useEffect, useState } from "react"
 import writeIcon from "../../resources/icon_new2_white.png"
 import ReactGA from "react-ga4";
 import ExLink from "../../resources/ex-link";
+import moment from "moment";
+
 const lang = "ja"
 const profile = {
     Name: "Sota Suzuki",
-    Age: 19,
+    Age: moment(new Date()).diff(moment("2002-07-30"), "years"),
     Birthday: "2002-07-30",
-    School: "National Institute of Technology, Nagano College",
-    Department: "Electronics and Computer Science",
+    School: moment(new Date()).diff(moment("2003-04-01"), "days") > 0 ? "National Institute of Technology, Nagano College" : "University of Tsukuba",
+    Department:  moment(new Date()).diff(moment("2003-04-01"), "days") > 0  ? "Electronics and Computer Science" : "College of Knowledge and Library Sciences(klis)",
+    "PGP Key": <a href="https://keybase.io/bonychops/pgp_keys.asc" className="text-blue-400 ml-1 flex" target="_blank" rel="noopener noreferrer">{ExLink} 457B F5D6 9ECE 0883</a>
 }
 
 const profileDetails = {
@@ -92,6 +95,11 @@ const history = [
         color: "yellow-600",
         date: "2021",
     }*/
+    {
+        title: "筑波大学 知識情報・図書館学類へ編入(予定)",
+        color: "bg-yellow-600",
+        date: "April 2023"
+    }
 ]
 
 const mainSkills = {
@@ -143,7 +151,7 @@ const Top = (props) => {
     }, []);
 
     return (
-        <div className="text-white font-thin bg-gray-700">
+        <div className="text-white font-normal bg-gray-700">
             <div className="bg-gray-800 md:flex sm:block block pt-28 md:pb-16 xl:px-48 md:px-16 px-4 rounded-3xl shadow-2xl border-b-2 border-gray-900">
                 <div className="md:w-1/2 w-full h-24 overflow-hidden">
                     <div className="my-auto flex ml-auto right-0">
@@ -167,7 +175,7 @@ const Top = (props) => {
                     {Object.keys(profile).map(key => {
                         const value = profile[key];
                         return <tr className="text-2xl">
-                            <td className="text-right">{key}</td>
+                            <td className="text-right align-top">{key}</td>
                             <td className="text-left pl-5">{value}</td>
                         </tr>
                     })}
