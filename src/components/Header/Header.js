@@ -28,7 +28,7 @@ const Header = () => {
             {/* <img className="h-full" src={darkLogo}/> */}
             <Link className="" to="/" style={{width: "64px"}}><img src={whiteIcon} width="64px" height="64px" className="items-center" alt="logo"/></Link>
             <div className="flex overflow-x-auto ml-2 w-9/12">
-                {menu.map((item, k) => <Link key={k} to={item.link} className="sm:mx-8 mx-4 rounded-xl text-white hover:text-yellow-700 text-2xl font-thin content-center flex flex-wrap"><span className="">{item.title}</span></Link>)}
+                {menu.map((item, k) => <Link key={k} to={item.link} className="sm:mx-8 mx-4 rounded-xl text-white hover:text-yellow-700 text-2xl font-normal content-center flex flex-wrap"><span className="">{item.title}</span></Link>)}
             </div>
         </div>
     )
