@@ -27,3 +27,4 @@ yarn-debug.log*
 yarn-error.log*
 src/resources/icon_new2.xcf
 public/gtag.js
+.env
