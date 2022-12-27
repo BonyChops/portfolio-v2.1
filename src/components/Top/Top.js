@@ -10,7 +10,7 @@ const profile = {
     Age: moment(new Date()).diff(moment("2002-07-30"), "years"),
     Birthday: "2002-07-30",
     School: moment(new Date()).diff(moment("2003-04-01"), "days") > 0 ? "National Institute of Technology, Nagano College" : "University of Tsukuba",
-    Department:  moment(new Date()).diff(moment("2003-04-01"), "days") > 0  ? "Electronics and Computer Science" : "College of Knowledge and Library Sciences(klis)",
+    Department: moment(new Date()).diff(moment("2003-04-01"), "days") > 0 ? "Electronics and Computer Science" : "College of Knowledge and Library Sciences(klis)",
     "PGP Key": <a href="https://keybase.io/bonychops/pgp_keys.asc" className="text-blue-400 ml-1 flex" target="_blank" rel="noopener noreferrer">{ExLink} 457B F5D6 9ECE 0883</a>
 }
 
@@ -18,7 +18,7 @@ const profileDetails = {
     /*"Favorite Artists": ["HIKAKIN", "Omega Sisters", "Avicii", "TheFatRat", "Galantis"].join(", "), */
     License: <span class="">{["Driver's license", "英検 2級", <a className="flex text-blue-400" href="https://twitter.com/BonyChops/status/1503567078699462659?s=20&t=tPdrA4blpItQQJG4FeiTAw" target="_blank" rel="noopener noreferrer">{ExLink} {"TOEIC L&R 860"}</a>].map(v => <p className="mr-2">{v}</p>)}</span>,
     Supporting: <a className="text-blue-400 flex" href="https://github.com/b-editor/BeUtl" target="_blank" rel="noopener noreferrer">{ExLink}BeUtl</a>,
-    "Dog or Cat": "Cat"
+    // "Dog or Cat": "Cat"
 }
 
 const skills = {
@@ -96,6 +96,12 @@ const history = [
         date: "2021",
     }*/
     {
+        title: "Hack U KOSEN 2022 最優秀賞",
+        description: "衝撃のイナズマZとして参加し，TenTen: オンライン点呼プラットフォームが最優秀賞を受賞",
+        color: "bg-yellow-600",
+        date: "Nov 28 - Dec 17, 2022",
+    },
+    {
         title: "筑波大学 知識情報・図書館学類へ編入(予定)",
         color: "bg-yellow-600",
         date: "April 2023"
@@ -122,10 +128,10 @@ const learnNext = {
         "Go"
     ],
     "Native App": [
-        "Unity", "C#"
+        "Electron"
     ],
     Tools: [
-        "GCP: Cloud Run", "Git LFS", "JetBrains"
+        "Remotion"
     ]
 }
 
@@ -143,12 +149,18 @@ const SkillTable = (obj) => <table className="table-auto">
 const Top = (props) => {
     const [showMoreProfile, setShowMoreProfile] = useState(false);
     const toggleShowMore = () => { setShowMoreProfile(!showMoreProfile) }
+    let buildInfo = null;
+    if (["COMMIT_REF", "COMMIT_REF_SHORT", "COMMIT_LINK", "BUILD_AT"].every(v => process.env[`REACT_APP_${v}`])) {
+        const { REACT_APP_COMMIT_LINK: COMMIT_LINK, REACT_APP_COMMIT_REF: COMMIT_REF, REACT_APP_COMMIT_REF_SHORT: COMMIT_REF_SHORT, REACT_APP_BUILD_AT: BUILD_AT } = process.env;
+        buildInfo = {COMMIT_REF, COMMIT_REF_SHORT, COMMIT_LINK, BUILD_AT};
+    }
 
     useEffect(() => {
         ReactGA.send({ hitType: "pageview", page: "/" });
 
         return () => { }
     }, []);
+
 
     return (
         <div className="text-white font-normal bg-gray-700">
@@ -227,6 +239,9 @@ const Top = (props) => {
                     </div>)}
                 </div>
             </div>
+            {buildInfo && <div class="pb-8 text-center">
+                <span className="flex justify-center"><a href={`${buildInfo.COMMIT_LINK}/${buildInfo.COMMIT_REF}`} className="text-blue-400 ml-1m mr-2 flex" target="_blank" rel="noopener noreferrer">{ExLink} {buildInfo.COMMIT_REF_SHORT}</a> ({moment(new Date(Number(buildInfo.BUILD_AT) * 1000)).format("YYYY/MM/DD hh:mm:ss")})</span>
+            </div>}
         </div>
     )
 }
