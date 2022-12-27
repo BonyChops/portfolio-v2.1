@@ -58,7 +58,7 @@ const WIP = () => {
 
 
     return (
-        <div className="text-white bg-gray-900 pt-16 min-h-full font-bold min-h-screen h-full">
+        <div className="text-white bg-gray-900 pt-16 font-bold min-h-screen h-full">
             <div className="py-16 xl:px-72 md:px-36 sm:px-16 px-4 xl:mx-36 md:mx-16 text-left bg-gray-900">
                 <div className="flex py-4 border-b-2 border-gray-700 mb-6">
                     <button onClick={() => openWipTab()} className={`border-b-2 w-min mr-4 font-bold ${completedOpened ? 'hover:border-gray-400 hover:text-gray-400 hover:border-current border-transparent' : 'border-purple-400 text-purple-400'}`}>
