@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { CSSTransition } from "react-transition-group";
-import mountainImage from "../../resources/notfree/mountains-1412683_1280.png"
+import mountainImage from "../../resources/notfree/mountains.jpeg"
 import Icon from "../../resources/icon_new2_white.png"
 import { TypeAnimation } from 'react-type-animation';
 

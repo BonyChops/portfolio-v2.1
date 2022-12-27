@@ -100,6 +100,18 @@ const history = [
         description: "衝撃のイナズマZとして参加し，TenTen: オンライン点呼プラットフォームが最優秀賞を受賞",
         color: "bg-yellow-600",
         date: "Nov 28 - Dec 17, 2022",
+        links: [{
+            title: "Hack U KOSEN 2022",
+            link: "https://hacku.yahoo.co.jp/kosen2022/"
+        },
+        {
+            title: "TenTen 発表スライド",
+            link: "https://nnct-tenko-slide.web.app"
+        },
+        {
+            title: "Hack U KOSEN 2022 参加記 by Jumpeace",
+            link: "https://qiita.com/Jumpeace/items/c7c2430f25e5397c7fed"
+        }]
     },
     {
         title: "筑波大学 知識情報・図書館学類へ編入(予定)",
@@ -152,7 +164,7 @@ const Top = (props) => {
     let buildInfo = null;
     if (["COMMIT_REF", "COMMIT_REF_SHORT", "COMMIT_LINK", "BUILD_AT"].every(v => process.env[`REACT_APP_${v}`])) {
         const { REACT_APP_COMMIT_LINK: COMMIT_LINK, REACT_APP_COMMIT_REF: COMMIT_REF, REACT_APP_COMMIT_REF_SHORT: COMMIT_REF_SHORT, REACT_APP_BUILD_AT: BUILD_AT } = process.env;
-        buildInfo = {COMMIT_REF, COMMIT_REF_SHORT, COMMIT_LINK, BUILD_AT};
+        buildInfo = { COMMIT_REF, COMMIT_REF_SHORT, COMMIT_LINK, BUILD_AT };
     }
 
     useEffect(() => {
@@ -231,16 +243,24 @@ const Top = (props) => {
                             <div className={`${item.color} col-start-4 col-end-12 p-4 rounded-xl my-4 mr-auto shadow-md w-full text-left`}>
                                 <h3 className="font-semibold text-lg mb-1">{item.title}</h3>
                                 {item.description !== undefined ? <p className="font-semibold text-xs mb-1">{item.description}</p> : null}
+
+                                {item.links && <div className="mb-2">
+                                    {item?.links?.map(v => (<p>
+                                        {v.title}
+                                    </p>))}
+                                </div>}
                                 <p className="leading-tight text-justify w-full font-normal">
                                     {item.date}
                                 </p>
+
                             </div>
                         </div>
                     </div>)}
                 </div>
             </div>
             {buildInfo && <div class="pb-8 text-center">
-                <span className="flex justify-center"><a href={`${buildInfo.COMMIT_LINK}/${buildInfo.COMMIT_REF}`} className="text-blue-400 ml-1m mr-2 flex" target="_blank" rel="noopener noreferrer">{ExLink} {buildInfo.COMMIT_REF_SHORT}</a> ({moment(new Date(Number(buildInfo.BUILD_AT) * 1000)).format("YYYY/MM/DD hh:mm:ss")})</span>
+                <p>BonyChops/portfolio-v2.1</p>
+                <span className="flex justify-center">Commit: <a href={`${buildInfo.COMMIT_LINK}/${buildInfo.COMMIT_REF}`} className="text-blue-400 ml-1m mr-2 flex" target="_blank" rel="noopener noreferrer">{ExLink} {buildInfo.COMMIT_REF_SHORT}</a> ({moment(new Date(Number(buildInfo.BUILD_AT) * 1000)).fromNow() /* .format("YYYY/MM/DD hh:mm:ss") */})</span>
             </div>}
         </div>
     )
