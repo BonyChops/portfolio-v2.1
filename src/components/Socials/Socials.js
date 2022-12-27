@@ -10,7 +10,7 @@ import keybase from "../../resources/socials/keybase.svg";
 import gmail from "../../resources/socials/gmail.svg";
 import Key from "../../resources/key.svg";
 import amazon from "../../resources/socials/amazon.svg"
-import atcoder from "../../resources/notfree/socials/atcoder.png"
+import atcoder from "../../resources/notfree/socials/atcoder.svg"
 import patreon from "../../resources/socials/patreon.svg";
 import { useEffect } from "react";
 import ReactGA from "react-ga4";
