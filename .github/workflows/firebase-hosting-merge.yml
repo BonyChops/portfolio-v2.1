@@ -20,7 +20,7 @@ jobs:
           echo "::set-output name=sha::$(git rev-parse HEAD)"
           echo "::set-output name=build_at::$(git --no-pager show -s --format=%ct HEAD)"
       - run: mkdir -p src/resources/notfree/socials
-      - run: wget -q -O - ${{ secrets.MOUNTAIN_IMAGE }} > src/resources/notfree/mountain.jpeg
+      - run: wget -q -O - ${{ secrets.MOUNTAIN_IMAGE }} > src/resources/notfree/mountains.jpeg
       - run: wget -q -O - ${{ secrets.ATCODER_LOGO }} > src/resources/notfree/socials/atcoder.svg
       - run: npm ci && npm run build
         env:
