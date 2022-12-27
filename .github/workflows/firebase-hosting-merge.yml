@@ -20,7 +20,7 @@ jobs:
           echo "::set-output name=sha::$(git rev-parse HEAD)"
           echo "::set-output name=build_at::$(git --no-pager show -s --format=%ct HEAD)"
       - run: npm ci && npm run build
-          env:
+        env:
             REACT_APP_GTAG: '${{ secrets.REACT_APP_GTAG }}'
             REACT_APP_COMMIT: ${{ steps.vars.outputs.sha }}"
             REACT_APP_COMMIT_REF_SHORT: ${{ steps.vars.outputs.sha_short }}"
