@@ -1,10 +1,10 @@
 import React from "react";
-import { workInfo } from "../../resources/works";
+// import { workInfo } from "../../resources/works";
 import axios from "axios";
 import Star from "../../resources/star";
 import Fork from "../../resources/fork";
 import { Link } from "react-router-dom";
-import { withRouter } from "react-router";
+// import { withRouter } from "react-router";
 import ExLink from "../../resources/ex-link";
 import ReactGA from "react-ga4";
 

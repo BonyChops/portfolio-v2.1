@@ -4,7 +4,7 @@ import axios from "axios";
 import moment from "moment";
 import Refresh from "../../resources/refresh";
 import Locked from "../../resources/locked";
-import RightArrow from "../../resources/right";
+// import RightArrow from "../../resources/right";
 import MenuClosed from "../../resources/menuClosed";
 import MenuOpened from "../../resources/menuOpened";
 import Checked from "../../resources/checked";

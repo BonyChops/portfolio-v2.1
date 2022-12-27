@@ -25,7 +25,7 @@ const LoginAnimation = (props) => {
                 <div>
                     <div className="place-content-center w-screen h-screen bg-cover bg-center" style={{ backgroundImage: `url(${mountainImage})` }}>
                         <div className="w-full h-full bg-gray-700 backdrop-filter backdrop-blur-lg bg-opacity-40 py-48">
-                            <img className="mx-auto left-0 right-0 w-48 rounded-full" src={Icon} />
+                            <img className="mx-auto left-0 right-0 w-48 rounded-full" src={Icon} alt="" />
                             <p className="text-6xl my-14 text-gray-200">Bony_Chops</p>
                             {/* <p className="text-3xl my-8 text-gray-200">{screenUp ? null : "Welcome"}</p> */}
                             <div className="bg-white h-12 w-80 mx-auto left-0 right-0 border-2 border-gray-200 text-3xl text-left">

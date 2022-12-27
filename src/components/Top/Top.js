@@ -4,7 +4,7 @@ import ReactGA from "react-ga4";
 import ExLink from "../../resources/ex-link";
 import moment from "moment";
 
-const lang = "ja"
+// const lang = "ja";
 const profile = {
     Name: "Sota Suzuki",
     Age: moment(new Date()).diff(moment("2002-07-30"), "years"),
@@ -16,8 +16,8 @@ const profile = {
 
 const profileDetails = {
     /*"Favorite Artists": ["HIKAKIN", "Omega Sisters", "Avicii", "TheFatRat", "Galantis"].join(", "), */
-    License: <span class="">{["Driver's license", "英検 2級", <a className="flex text-blue-400" href="https://twitter.com/BonyChops/status/1503567078699462659?s=20&t=tPdrA4blpItQQJG4FeiTAw" target="_blank" rel="noopener">{ExLink} {"TOEIC L&R 860"}</a>].map(v => <p className="mr-2">{v}</p>)}</span>,
-    Supporting: <a className="text-blue-400 flex" href="https://github.com/b-editor/BeUtl" target="_blank" rel="noopener">{ExLink}BeUtl</a>,
+    License: <span class="">{["Driver's license", "英検 2級", <a className="flex text-blue-400" href="https://twitter.com/BonyChops/status/1503567078699462659?s=20&t=tPdrA4blpItQQJG4FeiTAw" target="_blank" rel="noopener noreferrer">{ExLink} {"TOEIC L&R 860"}</a>].map(v => <p className="mr-2">{v}</p>)}</span>,
+    Supporting: <a className="text-blue-400 flex" href="https://github.com/b-editor/BeUtl" target="_blank" rel="noopener noreferrer">{ExLink}BeUtl</a>,
     "Dog or Cat": "Cat"
 }
 
@@ -155,7 +155,7 @@ const Top = (props) => {
             <div className="bg-gray-800 md:flex sm:block block pt-28 md:pb-16 xl:px-48 md:px-16 px-4 rounded-3xl shadow-2xl border-b-2 border-gray-900">
                 <div className="md:w-1/2 w-full h-24 overflow-hidden">
                     <div className="my-auto flex ml-auto right-0">
-                        <img className="rounded-full xl:w-24 xl:h-24 md:w-24 w-12 md:h-24 h-12" src={writeIcon} />
+                        <img className="rounded-full xl:w-24 xl:h-24 md:w-24 w-12 md:h-24 h-12" src={writeIcon} alt="Bony_Chops" />
                         <div className="ml-5 mt-0 pt-0">
                             <span className=" xl:text-5xl text-4xl line-h h-24 leading-normal mt-0" >Bony_Chops<br />
                             </span>

@@ -1,5 +1,3 @@
-import darkLogo from "../../resources/new_header2_no_back_white.png"
-import darkIcon from "../../resources/icon_new2_trans.png"
 import whiteIcon from "../../resources/icon_new2_white_trans_middle.png"
 import { Link, withRouter } from "react-router-dom"
 

@@ -1,5 +1,4 @@
 import { BrowserRouter as Router, Route, Switch } from "react-router-dom";
-import { withRouter } from "react-router";
 import Header from './components/Header/Header';
 import ReactDefaultPage from './components/ReactDefaultPage/ReactDefaultPage';
 import './App.css';

@@ -4,7 +4,7 @@ import github from "../../resources/socials/github.svg";
 import zenn from "../../resources/socials/zenn.svg";
 import qiita from "../../resources/socials/qiita.svg";
 import nicha from "../../resources/socials/nicha.png";
-import niconico from "../../resources/socials/niconico.svg";
+// import niconico from "../../resources/socials/niconico.svg";
 import spotify from "../../resources/socials/spotify.svg";
 import keybase from "../../resources/socials/keybase.svg";
 import gmail from "../../resources/socials/gmail.svg";
@@ -176,7 +176,7 @@ const Socials = (props) => {
                 <h3 className="flex"><a className="flex text-blue-400 mr-2" target="_blank" rel="noopener noreferrer" href={`${process.env.PUBLIC_URL}/socials_signed_message.txt`}>{ExLink} Proof</a>(Signed with pgp key<a href={socialLinks.find(v => v.title === "PGP Key").link} className="text-blue-400 ml-1" target="_blank" rel="noopener noreferrer">{socialLinks.find(v => v.title === "PGP Key").name}</a>)</h3>
                 {socialLinks.map(item => <a href={item.link} target="_blank" rel="noopener noreferrer" className={`mx-auto sm:w-96 flex ${item.notAvailable ? "bg-gray-700" : " hover:opacity-30 "} rounded-xl shadow-sm py-5 text-left px-2 my-5 ${item.inverseColor ? "text-black" : ""}`} style={item.color !== undefined ? { backgroundColor: item.color } : {}}>
                     <div className="w-1/6 h-full my-auto">
-                        {item.icon !== undefined ? <img src={item.icon} width={item.bigIcon ? "48px" : "32px"} class="mx-auto my-auto" /> : null}
+                        {item.icon !== undefined ? <img src={item.icon} width={item.bigIcon ? "48px" : "32px"} class="mx-auto my-auto" alt="" /> : null}
                     </div>
                     <div className="w-5/6">
                         <p class="text-xl font-bold">{item.title}</p>
@@ -186,7 +186,7 @@ const Socials = (props) => {
                 <h2 className="text-4xl text-left text-green-400 mb-5 text-green-400font-bold">Sponsor</h2>
                 {sponsorLinks.map(item => <a href={item.link} target="_blank" rel="noopener noreferrer" className={`mx-auto sm:w-96 flex ${item.notAvailable ? "bg-gray-700" : " hover:opacity-30 "} rounded-xl shadow-sm py-5 text-left px-2 my-5 ${item.inverseColor ? "text-black" : ""}`} style={item.color !== undefined ? { backgroundColor: item.color } : {}}>
                     <div className="w-1/6 h-full my-auto">
-                        {item.icon !== undefined ? <img src={item.icon} width={item.bigIcon ? "48px" : "32px"} class="mx-auto my-auto" /> : null}
+                        {item.icon !== undefined ? <img src={item.icon} width={item.bigIcon ? "48px" : "32px"} class="mx-auto my-auto" alt="" /> : null}
                     </div>
                     <div className="w-5/6">
                         <p class="text-xl font-bold">{item.title}</p>
