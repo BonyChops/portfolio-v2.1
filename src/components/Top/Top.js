@@ -266,7 +266,8 @@ const Top = (props) => {
             </div>
             {buildInfo && <div class="pb-8 text-center">
                 <p>{buildInfo.REPO_NAME}</p>
-                <span className="flex justify-center">Commit: <a href={`${buildInfo.COMMIT_LINK}/${buildInfo.COMMIT_REF}`} className="text-blue-400 ml-1m mr-2 flex" target="_blank" rel="noopener noreferrer">{ExLink} {buildInfo.COMMIT_REF_SHORT}</a> ({moment(new Date(Number(buildInfo.BUILD_AT) * 1000)).fromNow() /* .format("YYYY/MM/DD hh:mm:ss") */})</span>
+                <span className="flex justify-center">Commit: <a href={`${buildInfo.COMMIT_LINK}/${buildInfo.COMMIT_REF}`} className="text-blue-400 ml-1m mr-2 flex" target="_blank" rel="noopener noreferrer">{ExLink} {buildInfo.COMMIT_REF_SHORT}</a></span>
+                <p>{moment(new Date(Number(buildInfo.BUILD_AT) * 1000)).toString()} ({moment(new Date(Number(buildInfo.BUILD_AT) * 1000)).fromNow()})</p>
             </div>}
         </div>
     )
