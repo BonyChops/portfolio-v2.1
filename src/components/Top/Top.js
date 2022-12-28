@@ -89,6 +89,16 @@ const history = [
         title: "Web×IoT メイカーズチャレンジ 2020-21 in 信州: Team Jambiで特別賞受賞",
         color: "bg-yellow-600",
         date: "Oct 7 - Oct 28, 2020",
+        links: [
+            {
+                title: "Web×IoT メイカーズチャレンジ 2020-21",
+                link: "https://webiotmakers.github.io/2020/"
+            },
+            {
+                title: "初めてハッカソンに参加してみた話",
+                link: "https://qiita.com/BonyChops/items/66e6e7e67d181fcc42f1"
+            }
+        ]
     },
     /*{
         title: "インターン: エプソンアヴァシス上田事業所",
@@ -103,6 +113,10 @@ const history = [
         links: [{
             title: "Hack U KOSEN 2022",
             link: "https://hacku.yahoo.co.jp/kosen2022/"
+        },
+        {
+            title: "TenTen 発表 by Bony_Chops",
+            link: "https://www.youtube.com/watch?t=3408&v=VIwtxB-X24k"
         },
         {
             title: "TenTen 発表スライド",
@@ -162,9 +176,15 @@ const Top = (props) => {
     const [showMoreProfile, setShowMoreProfile] = useState(false);
     const toggleShowMore = () => { setShowMoreProfile(!showMoreProfile) }
     let buildInfo = null;
-    if (["COMMIT_REF", "COMMIT_REF_SHORT", "COMMIT_LINK", "BUILD_AT"].every(v => process.env[`REACT_APP_${v}`])) {
-        const { REACT_APP_COMMIT_LINK: COMMIT_LINK, REACT_APP_COMMIT_REF: COMMIT_REF, REACT_APP_COMMIT_REF_SHORT: COMMIT_REF_SHORT, REACT_APP_BUILD_AT: BUILD_AT } = process.env;
-        buildInfo = { COMMIT_REF, COMMIT_REF_SHORT, COMMIT_LINK, BUILD_AT };
+    if (["COMMIT_REF", "COMMIT_REF_SHORT", "COMMIT_LINK", "BUILD_AT", "REPO_NAME"].every(v => process.env[`REACT_APP_${v}`])) {
+        const {
+            REACT_APP_COMMIT_LINK: COMMIT_LINK,
+            REACT_APP_COMMIT_REF: COMMIT_REF,
+            REACT_APP_COMMIT_REF_SHORT: COMMIT_REF_SHORT,
+            REACT_APP_BUILD_AT: BUILD_AT,
+            REACT_APP_REPO_NAME: REPO_NAME
+        } = process.env;
+        buildInfo = { COMMIT_REF, COMMIT_REF_SHORT, COMMIT_LINK, BUILD_AT, REPO_NAME };
     }
 
     useEffect(() => {
@@ -229,6 +249,7 @@ const Top = (props) => {
             </div>
             <div className="py-16 xl:px-72 md:px-36 sm:px-16 px-4">
                 <h2 className="text-4xl text-left mb-5 text-green-400">History</h2>
+                <p>Show A</p>
                 <div className="container">
                     {history.map((item, k) => <div className="flex flex-col md:grid grid-cols-12 text-gray-50">
                         <div className="flex md:contents">
@@ -245,8 +266,10 @@ const Top = (props) => {
                                 {item.description !== undefined ? <p className="font-semibold text-xs mb-1">{item.description}</p> : null}
 
                                 {item.links && <div className="mb-2">
-                                    {item?.links?.map(v => (<p>
-                                        {v.title}
+                                    {item?.links?.map(v => (<p className="text-purple-00">
+                                        <a href={v.link} target="_blank" rel="noopener noreferrer" className="flex">
+                                            {ExLink} {v.title}
+                                        </a>
                                     </p>))}
                                 </div>}
                                 <p className="leading-tight text-justify w-full font-normal">
@@ -259,8 +282,9 @@ const Top = (props) => {
                 </div>
             </div>
             {buildInfo && <div class="pb-8 text-center">
-                <p>BonyChops/portfolio-v2.1</p>
-                <span className="flex justify-center">Commit: <a href={`${buildInfo.COMMIT_LINK}/${buildInfo.COMMIT_REF}`} className="text-blue-400 ml-1m mr-2 flex" target="_blank" rel="noopener noreferrer">{ExLink} {buildInfo.COMMIT_REF_SHORT}</a> ({moment(new Date(Number(buildInfo.BUILD_AT) * 1000)).fromNow() /* .format("YYYY/MM/DD hh:mm:ss") */})</span>
+                <p>{buildInfo.REPO_NAME}</p>
+                <span className="flex justify-center">Commit: <a href={`${buildInfo.COMMIT_LINK}/${buildInfo.COMMIT_REF}`} className="text-blue-400 ml-1m mr-2 flex" target="_blank" rel="noopener noreferrer">{ExLink} {buildInfo.COMMIT_REF_SHORT}</a></span>
+                <p>{moment(new Date(Number(buildInfo.BUILD_AT) * 1000)).toString()} ({moment(new Date(Number(buildInfo.BUILD_AT) * 1000)).fromNow()})</p>
             </div>}
         </div>
     )
