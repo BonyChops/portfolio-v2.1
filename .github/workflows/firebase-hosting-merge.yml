@@ -22,16 +22,17 @@ jobs:
           echo "::set-output name=sha_short::$(git rev-parse --short HEAD)"
           echo "::set-output name=sha::$(git rev-parse HEAD)"
           echo "::set-output name=build_at::$(git --no-pager show -s --format=%ct HEAD)"
+          echo "::set-output name=repo_name::$(echo ${GITHUB_REPOSITORY})"
       - run: mkdir -p src/resources/notfree/socials
       - run: wget -q -O - ${{ secrets.MOUNTAIN_IMAGE }} > src/resources/notfree/mountains.jpeg
       - run: wget -q -O - ${{ secrets.ATCODER_LOGO }} > src/resources/notfree/socials/atcoder.svg
       - run: npm ci && npm run build
         env:
             REACT_APP_GTAG: '${{ secrets.REACT_APP_GTAG }}'
-            REACT_APP_COMMIT: ${{ steps.vars.outputs.sha }}"
+            REACT_APP_COMMIT_REF: ${{ steps.vars.outputs.sha }}"
             REACT_APP_COMMIT_REF_SHORT: ${{ steps.vars.outputs.sha_short }}"
             REACT_APP_BUILD_AT: ${{ steps.vars.outputs.build_at }}"
-            REACT_APP_COMMIT_LINK: https://github.com/${GITHUB_REPOSITORY}/commit/${{ steps.vars.outputs.sha }}"
+            REACT_APP_COMMIT_LINK: "https://github.com/${{ steps.vars.outputs.repo_name }}/commit/${{ steps.vars.outputs.sha }}"
             GENERATE_SOURCEMAP: false
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
