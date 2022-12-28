@@ -32,6 +32,7 @@ jobs:
             REACT_APP_COMMIT_REF_SHORT: ${{ steps.vars.outputs.sha_short }}"
             REACT_APP_BUILD_AT: ${{ steps.vars.outputs.build_at }}"
             REACT_APP_COMMIT_LINK: https://github.com/${GITHUB_REPOSITORY}/commit/${{ steps.vars.outputs.sha }}"
+            GENERATE_SOURCEMAP: false
       - uses: FirebaseExtended/action-hosting-deploy@v0
         with:
           repoToken: '${{ secrets.GITHUB_TOKEN }}'
