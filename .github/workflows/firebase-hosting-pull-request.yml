@@ -12,6 +12,7 @@ jobs:
       - uses: actions/setup-node@v3
         with:
           node-version: 18
+      - run: mkdir -p src/resources/notfree/socials
       - run: wget -q -O - ${{ secrets.MOUNTAIN_IMAGE }} > src/resources/notfree/mountains.jpeg
       - run: wget -q -O - ${{ secrets.ATCODER_LOGO }} > src/resources/notfree/socials/atcoder.svg
       - run: npm ci && npm run build
