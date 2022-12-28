@@ -89,6 +89,16 @@ const history = [
         title: "Web×IoT メイカーズチャレンジ 2020-21 in 信州: Team Jambiで特別賞受賞",
         color: "bg-yellow-600",
         date: "Oct 7 - Oct 28, 2020",
+        links: [
+            {
+                title: "Web×IoT メイカーズチャレンジ 2020-21",
+                link: "https://webiotmakers.github.io/2020/"
+            },
+            {
+                title: "初めてハッカソンに参加してみた話",
+                link: "https://qiita.com/BonyChops/items/66e6e7e67d181fcc42f1"
+            }
+        ]
     },
     /*{
         title: "インターン: エプソンアヴァシス上田事業所",
@@ -103,6 +113,10 @@ const history = [
         links: [{
             title: "Hack U KOSEN 2022",
             link: "https://hacku.yahoo.co.jp/kosen2022/"
+        },
+        {
+            title: "TenTen 発表 by Bony_Chops",
+            link: "https://www.youtube.com/watch?t=3408&v=VIwtxB-X24k"
         },
         {
             title: "TenTen 発表スライド",
@@ -235,6 +249,7 @@ const Top = (props) => {
             </div>
             <div className="py-16 xl:px-72 md:px-36 sm:px-16 px-4">
                 <h2 className="text-4xl text-left mb-5 text-green-400">History</h2>
+                <p>Show A</p>
                 <div className="container">
                     {history.map((item, k) => <div className="flex flex-col md:grid grid-cols-12 text-gray-50">
                         <div className="flex md:contents">
@@ -251,8 +266,10 @@ const Top = (props) => {
                                 {item.description !== undefined ? <p className="font-semibold text-xs mb-1">{item.description}</p> : null}
 
                                 {item.links && <div className="mb-2">
-                                    {item?.links?.map(v => (<p>
-                                        {v.title}
+                                    {item?.links?.map(v => (<p className="text-purple-00">
+                                        <a href={v.link} target="_blank" rel="noopener noreferrer" className="flex">
+                                            {ExLink} {v.title}
+                                        </a>
                                     </p>))}
                                 </div>}
                                 <p className="leading-tight text-justify w-full font-normal">
