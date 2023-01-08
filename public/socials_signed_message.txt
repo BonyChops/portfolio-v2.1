@@ -1,11 +1,23 @@
 -----BEGIN PGP SIGNED MESSAGE-----
-Hash: SHA256
+Hash: SHA512
 
 These are social accounts owned by me, Bony_Chops.
 
 # Mail
   - contact@bonychops.com
   - mailto:contact@bonychops.com
+
+# Twitter
+  - @BonyChops
+  - https://twitter.com/BonyChops
+
+# Twitter
+  - @BonyDaily
+  - https://twitter.com/BonyDaily
+
+# GitHub
+  - BonyChops
+  - https://github.com/BonyChops
 
 # YouTube
   - Bony_Chops - Archived
@@ -15,17 +27,13 @@ These are social accounts owned by me, Bony_Chops.
   - Bony_Chops v2
   - https://www.youtube.com/channel/UCVtSxqezSf8yJb0LGFplpIw
 
-# Twitter
-  - @BonyChops
-  - https://twitter.com/BonyChops
-
-# GitHub
-  - BonyChops
-  - https://github.com/BonyChops
-
 # Keybase
   - bonychops
   - https://keybase.io/bonychops/sigs/U3wlm9JB0oB4TLeRiU5SWp0YBqhM8fg6hGuLVu5rpJM
+
+# npm
+  - bony_chops
+  - https://www.npmjs.com/\~bony_chops
 
 # PGP Key
   - 457B F5D6 9ECE 0883
@@ -49,11 +57,11 @@ These are social accounts owned by me, Bony_Chops.
 
 # Spotify
   - bony_chops
-  - https://open.spotify.com/user/bony_chops?si=b5de1e352fad4eba
+  - https://open.spotify.com/user/bony_chops\?si\=b5de1e352fad4eba
 
 # Patreon
   - Bony_Chops
-  - https://www.patreon.com/user/creators?u=52944861
+  - https://www.patreon.com/user/creators\?u\=52944861
 
 # Nicha
   - Developing...
@@ -61,24 +69,20 @@ These are social accounts owned by me, Bony_Chops.
 
 # Kicha
   - Archived Project
-  - https://github.com/BonyChops/simple-bbs
-
-# Amazon
-  - 欲しい物リスト
-  - https://www.amazon.jp/hz/wishlist/ls/8FLZNBFCT3ZK?ref_=wl_share
+  - https://github.com/BonyChops/simple-bbs Socials.js:177
 -----BEGIN PGP SIGNATURE-----
 
-iQIzBAEBCAAdFiEEewPYodaz16USn7NsRXv11p7OCIMFAmJZJLkACgkQRXv11p7O
-CINd6g/+M0dv+VmtaDUJb0j9cW5xAZ4LIeNHmZ5wHfz0dPLEByUf9OJPGMTrjr8H
-A6F8XVrQxjvLUFo6QFf/66fMoFjCqqNCIhdC5HXCjGyzUpoRFmu/5ZbYglutvIoW
-862FnL7YNf3g2cgTXwK5h36H5JmYZSIuDRLppVVFkBjJBsdW4E5V6/ByJwDn6OqG
-0HvVNivMBnBvULYwT19USfenibQNGNq8J+cB0RKul5x8A6nbpJl3hD8np333emOC
-W5qdSmJhNAmUsFqP4u5kZMNTmQymDPHDamSRAAnunWPda89ypuluT3P/YEuQG2Pj
-pZcJ8htsmiGFL/bd5mqUCsh9IMwKwCypGbJMizbCejy7OKH7yFrqIQnHpsNTTbn2
-cGiD9TTQ4T/AfF0t+gI875MbE2RZpygR89knBFX8yrT3Utlr1EW/Xrei+DYaM2jY
-XBQyuXKjNZynVawdXQ0E5K9wRsSDrOlizyWGi24i3ZqCFegvO1FBpYu1YzH/ncTx
-dQ93N3NZob+7p7ehbNueUKheMUUrZvwqdPS6nr8lre+8apyGAh/DTqKoDJpTBRFY
-38FeIrf98IkKmALzCxawL9una9dUu3JYzRXzkTcQP8BgABzza77WRDDy4YeXGqFl
-C+P9OH8mfqnkWb4utpDGqFjczKrN0fBJ/2YFb8mpSVrhXd2HRxI=
-=LB5s
+iQIzBAEBCgAdFiEEewPYodaz16USn7NsRXv11p7OCIMFAmO6CHoACgkQRXv11p7O
+CIOEMg/7B/ZCzuTCQjNMJIi3CTobnGlgU0+DGsCO01s+yYVD2qHIuCj3WVA8MegP
+BM06SUld36Sve9JO5MFdQIpR8DTRWESpE+EYK95hO/vpTSDmsVvfk6it0ygvewiX
+MePN7WArRFjhdehAZuKsOqAWbTGYo5A13qPuUFVWRBrE4AQyB3lRX13xNrg+jnSa
+T/gMMOaaDimEb4il1Rc5gRL4/8lnoWjwszejxEFw7yO1pn5+8eTdr+JJd7t5AL5U
+DdwSRLzdtjcCcwOqtpQPpyAJ9quoqcMPIAFLgA8jTbGe+ADiUvoOlIGVVmy45LWc
++w4wlAyhUvyr7Q/assIO+DqRXAhzovnXGU6rhakxbenRUhUW77/MaKWS3wuOh2lI
+BCY/gSxkfiDaC7UsXSVRStiLEqwrpo4562F1m9JplUHhFmbDCuMQMro4MJTWs0GW
+HUSCh+qqvkEkK2TChfoIonNUtB6+OsT+ENKWMNZJEtTd2H1F/LqZDtnuqm6qssJi
+ElJBoVbC2F20eaNjojMjcryXFxLVOuW9ktnLK0SfdPb2sBMTSxoGvzzlKN/gFMir
+vzZ/31g/N+d8Ws/2fEkszPl+/Ptqy0GWhwUuQcn5TbzERTtdCztpYUJpPl/nB/nF
+YNGZgRZE/E/hC4aHTGmgnFWyGEv6z97cR9YU5Nfa9V52ZgMGG08=
+=frCV
 -----END PGP SIGNATURE-----

@@ -6,6 +6,7 @@ import qiita from "../../resources/socials/qiita.svg";
 import nicha from "../../resources/socials/nicha.png";
 // import niconico from "../../resources/socials/niconico.svg";
 import spotify from "../../resources/socials/spotify.svg";
+import npm from "../../resources/socials/npm.svg";
 import keybase from "../../resources/socials/keybase.svg";
 import gmail from "../../resources/socials/gmail.svg";
 import Key from "../../resources/key.svg";
@@ -66,6 +67,13 @@ const socialLinks = [
         color: "#33A0FF",
         icon: keybase,
         link: "https://keybase.io/bonychops/sigs/U3wlm9JB0oB4TLeRiU5SWp0YBqhM8fg6hGuLVu5rpJM"
+    },
+    {
+        title: "npm",
+        name: "bony_chops",
+        color: "#CB3837",
+        icon: npm,
+        link: "https://www.npmjs.com/~bony_chops"
     },
     {
         title: "PGP Key",
