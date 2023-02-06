@@ -120,7 +120,7 @@ const history = [
         },
         {
             title: "TenTen 発表スライド",
-            link: "https://nnct-tenko-slide.web.app"
+            link: "https://impact-z.github.io/nnct-tenko-prezen"
         },
         {
             title: "Hack U KOSEN 2022 参加記 by Jumpeace",
