@@ -13,6 +13,8 @@ import Key from "../../resources/key.svg";
 import amazon from "../../resources/socials/amazon.svg"
 import atcoder from "../../resources/notfree/socials/atcoder.svg"
 import patreon from "../../resources/socials/patreon.svg";
+import keyoxide from "../../resources/socials/keyoxide.png";
+import wantedly from "../../resources/socials/wantedly.svg";
 import { useEffect } from "react";
 import ReactGA from "react-ga4";
 import ExLink from "../../resources/ex-link";
@@ -69,6 +71,13 @@ const socialLinks = [
         link: "https://keybase.io/bonychops/sigs/U3wlm9JB0oB4TLeRiU5SWp0YBqhM8fg6hGuLVu5rpJM"
     },
     {
+        title: "Keyoxide",
+        name: "contact@bonychops.com",
+        color: "#56479e",
+        icon: keyoxide,
+        link: "https://keyoxide.org/hkp/contact%40bonychops.com"
+    },
+    {
         title: "npm",
         name: "bony_chops",
         color: "#CB3837",
@@ -98,6 +107,13 @@ const socialLinks = [
         bigIcon: true,
         icon: "https://social-icon-host.web.app/lapras.png",
         link: "https://lapras.com/public/FWS9AJP"
+    },
+    {
+        title: "Wantedly",
+        name: "Sota Suzuki",
+        icon: wantedly,
+        color: "#21BDDB",
+        link: "https://www.wantedly.com/id/Bony_Chops"
     },
     {
         title: "AtCoder",
@@ -168,6 +184,12 @@ const sponsorLinks = [
         color: "#EA4AAA",
         icon: github,
         link: "https://github.com/sponsors/BonyChops",
+    },
+    {
+        title: "Geartics",
+        name: "@BonyChops",
+        color: "#039be5",
+        link: "https://www.geartics.com/BonyChops"
     }
 ]
 
