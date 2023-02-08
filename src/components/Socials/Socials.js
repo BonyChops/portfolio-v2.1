@@ -191,7 +191,8 @@ const sponsorLinks = [
         name: "@sotajtoxv",
         link: "https://revolut.me/sotajtoxv",
         icon: revolut,
-        color: "#000000"
+        color: "#FFFFFF",
+        inverseColor: true
     },
     {
         title: "Geartics",
