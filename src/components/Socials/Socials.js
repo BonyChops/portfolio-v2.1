@@ -15,7 +15,7 @@ import atcoder from "../../resources/notfree/socials/atcoder.svg"
 import patreon from "../../resources/socials/patreon.svg";
 import keyoxide from "../../resources/socials/keyoxide.png";
 import wantedly from "../../resources/socials/wantedly.svg";
-import revoult from "../../resources/socials/revoult.svg";
+import revolut from "../../resources/socials/revolut.svg";
 import { useEffect } from "react";
 import ReactGA from "react-ga4";
 import ExLink from "../../resources/ex-link";
@@ -187,10 +187,10 @@ const sponsorLinks = [
         link: "https://github.com/sponsors/BonyChops",
     },
     {
-        title: "Revoult",
+        title: "Revolut",
         name: "@sotajtoxv",
         link: "https://revolut.me/sotajtoxv",
-        icon: revoult,
+        icon: revolut,
         color: "#000000"
     },
     {
