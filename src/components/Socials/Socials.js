@@ -15,6 +15,7 @@ import atcoder from "../../resources/notfree/socials/atcoder.svg"
 import patreon from "../../resources/socials/patreon.svg";
 import keyoxide from "../../resources/socials/keyoxide.png";
 import wantedly from "../../resources/socials/wantedly.svg";
+import paypal from "../../resources/socials/paypal.svg"
 import { useEffect } from "react";
 import ReactGA from "react-ga4";
 import ExLink from "../../resources/ex-link";
@@ -184,6 +185,13 @@ const sponsorLinks = [
         color: "#EA4AAA",
         icon: github,
         link: "https://github.com/sponsors/BonyChops",
+    },
+    {
+        title: "Paypal",
+        name: "@BonyChops",
+        color: "#00457C",
+        icon: paypal,
+        link: "https://www.paypal.me/BonyChops"
     },
     {
         title: "Geartics",
