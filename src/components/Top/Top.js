@@ -9,8 +9,8 @@ const profile = {
     Name: "Sota Suzuki",
     Age: moment(new Date()).diff(moment("2002-07-30"), "years"),
     Birthday: "2002-07-30",
-    School: moment(new Date()).diff(moment("2003-04-01"), "days") > 0 ? "National Institute of Technology, Nagano College" : "University of Tsukuba",
-    Department: moment(new Date()).diff(moment("2003-04-01"), "days") > 0 ? "Electronics and Computer Science" : "College of Knowledge and Library Sciences(klis)",
+    School: moment(new Date()).diff(moment("2013-04-01"), "days") < 0 ? "National Institute of Technology, Nagano College" : "University of Tsukuba",
+    Department: moment(new Date()).diff(moment("2013-04-01"), "days") < 0 ? "Electronics and Computer Science" : "College of Knowledge and Library Sciences(klis)",
     "PGP Key": <a href="https://keybase.io/bonychops/pgp_keys.asc" className="text-blue-400 ml-1 flex" target="_blank" rel="noopener noreferrer">{ExLink} 457B F5D6 9ECE 0883</a>
 }
 

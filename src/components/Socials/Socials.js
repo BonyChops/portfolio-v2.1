@@ -15,6 +15,7 @@ import atcoder from "../../resources/notfree/socials/atcoder.svg"
 import patreon from "../../resources/socials/patreon.svg";
 import keyoxide from "../../resources/socials/keyoxide.png";
 import wantedly from "../../resources/socials/wantedly.svg";
+import paypal from "../../resources/socials/paypal.svg"
 import revolut from "../../resources/socials/revolut.svg";
 import { useEffect } from "react";
 import ReactGA from "react-ga4";
@@ -26,21 +27,24 @@ const socialLinks = [
         name: "contact@bonychops.com",
         icon: gmail,
         color: "#EA4335",
-        link: "mailto:contact@bonychops.com"
+        link: "mailto:contact@bonychops.com",
+        inverseIconColor: true
     },
     {
         title: "Twitter",
         name: "@BonyChops",
         icon: twitter,
         color: "#1DA1F2",
-        link: "https://twitter.com/BonyChops"
+        link: "https://twitter.com/BonyChops",
+        inverseIconColor: true
     },
     {
         title: "Twitter",
         name: "@BonyDaily",
         icon: twitter,
         color: "#1DA1F2",
-        link: "https://twitter.com/BonyDaily"
+        link: "https://twitter.com/BonyDaily",
+        inverseIconColor: true
     },
     {
         title: "GitHub",
@@ -187,6 +191,14 @@ const sponsorLinks = [
         link: "https://github.com/sponsors/BonyChops",
     },
     {
+        title: "Paypal",
+        name: "@BonyChops",
+        color: "#00457C",
+        icon: paypal,
+        link: "https://www.paypal.me/BonyChops",
+        inverseIconColor: true
+    },
+    {
         title: "Revolut",
         name: "@sotajtoxv",
         link: "https://revolut.me/sotajtoxv",
@@ -215,7 +227,7 @@ const Socials = (props) => {
                 <h3 className="flex"><a className="flex text-blue-400 mr-2" target="_blank" rel="noopener noreferrer" href={`${process.env.PUBLIC_URL}/socials_signed_message.txt`}>{ExLink} Proof</a>(Signed with pgp key<a href={socialLinks.find(v => v.title === "PGP Key").link} className="text-blue-400 ml-1" target="_blank" rel="noopener noreferrer">{socialLinks.find(v => v.title === "PGP Key").name}</a>)</h3>
                 {socialLinks.map(item => <a href={item.link} target="_blank" rel="noopener noreferrer" className={`mx-auto sm:w-96 flex ${item.notAvailable ? "bg-gray-700" : " hover:opacity-30 "} rounded-xl shadow-sm py-5 text-left px-2 my-5 ${item.inverseColor ? "text-black" : ""}`} style={item.color !== undefined ? { backgroundColor: item.color } : {}}>
                     <div className="w-1/6 h-full my-auto">
-                        {item.icon !== undefined ? <img src={item.icon} width={item.bigIcon ? "48px" : "32px"} class="mx-auto my-auto" alt="" /> : null}
+                        {item.icon !== undefined ? <img src={item.icon} width={item.bigIcon ? "48px" : "32px"} class="mx-auto my-auto" alt="" style={item.inverseIconColor ? {filter:  "brightness(0) invert(1)"} : {}} /> : null}
                     </div>
                     <div className="w-5/6">
                         <p class="text-xl font-bold">{item.title}</p>
@@ -225,7 +237,7 @@ const Socials = (props) => {
                 <h2 className="text-4xl text-left text-green-400 mb-5 text-green-400font-bold">Sponsor</h2>
                 {sponsorLinks.map(item => <a href={item.link} target="_blank" rel="noopener noreferrer" className={`mx-auto sm:w-96 flex ${item.notAvailable ? "bg-gray-700" : " hover:opacity-30 "} rounded-xl shadow-sm py-5 text-left px-2 my-5 ${item.inverseColor ? "text-black" : ""}`} style={item.color !== undefined ? { backgroundColor: item.color } : {}}>
                     <div className="w-1/6 h-full my-auto">
-                        {item.icon !== undefined ? <img src={item.icon} width={item.bigIcon ? "48px" : "32px"} class="mx-auto my-auto" alt="" /> : null}
+                        {item.icon !== undefined ? <img src={item.icon} width={item.bigIcon ? "48px" : "32px"} class="mx-auto my-auto" alt="" style={item.inverseIconColor ? {filter:  "brightness(0) invert(1)"} : {}} /> : null}
                     </div>
                     <div className="w-5/6">
                         <p class="text-xl font-bold">{item.title}</p>
